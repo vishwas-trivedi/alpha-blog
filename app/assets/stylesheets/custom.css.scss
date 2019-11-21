@@ -43,6 +43,18 @@ $navbar-default-bg: #660033;
   letter-spacing: -1px;
 }
 
+// .panel-heading-color {
+//   background-image: none;
+//   background-color: #660033;
+// }
+
+.panel > .panel-heading {
+  background-image: none;
+  background-color: #660033;
+  color: white;
+
+}
+
 .btn-xlarge {
   background-color: #660033;
   border-color: #660033;
