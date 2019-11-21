@@ -1,11 +1,4 @@
-<% if @article.errors.any? %>
-  <h4 style = "color: red">Validation failure</h4>
-  <ul>
-    <% @article.errors.full_messages.each do |msg| %>
-      <li style = "color: red"><%= msg %> </li>
-    <% end %>
-  </ul>
-<% end %>
+<%= render 'shared/errors', obj: @article %>
 
 <!-- Form start --> 
 <div class="row">
