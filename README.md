@@ -1,11 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application allows users to create articles and comment on other user's articles.
 
-Things you may want to cover:
+Application configuration details :
 
-* Ruby version
+* Ruby version : 2.5.1
+
+* Rails version : 5.1.7
 
 * System dependencies
 
