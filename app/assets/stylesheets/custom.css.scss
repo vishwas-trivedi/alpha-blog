@@ -9,6 +9,83 @@ $navbar-default-bg: #660033;
   color: white;
   font-size: large;
   font-weight: bold;
-  text-decoration: non;
+  letter-spacing: -1px;
   text-transform: uppercase;
+}
+
+#logo:hover{
+  color:#fff;
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  background-image: asset-url('cover-pg.jpg');
+  background-size: cover;
+  //height: 450px;
+}
+
+.jumbotron h1 {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+}
+
+.jumbotron p {
+  text-align: top center;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.btn-xlarge {
+  background-color: #660033;
+  border-color: #660033;
+}
+
+.btn-xlarge:hover {
+  background-color: #800040;
+}
+
+.footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #aeaeae;
+  color: #777;
+}
+
+.footer a:hover {
+  color: #222;
+}
+
+.footer small {
+  float: left;
+}
+
+.footer ul {
+  float: right;
+  list-style: none;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.separator::before, .separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #aeaeae;
+}
+.separator::before {
+  margin-right: .25em;
+}
+.separator::after {
+  margin-left: .25em;
 }
