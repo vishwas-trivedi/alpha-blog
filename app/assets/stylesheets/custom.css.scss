@@ -47,8 +47,25 @@ $navbar-default-bg: #660033;
 //   background-image: none;
 //   background-color: #660033;
 // }
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.separator::before, .separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #aeaeae;
+}
+.separator::before {
+  margin-right: .25em;
+}
+.separator::after {
+  margin-left: .25em;
+}
 
-.panel > .panel-heading {
+.panel > .heading-custom {
   background-image: none;
   background-color: #660033;
   color: white;
@@ -62,6 +79,20 @@ $navbar-default-bg: #660033;
 
 .btn-xlarge:hover {
   background-color: #800040;
+}
+
+.acticle-desc {
+  //border-top: 1px solid #aeaeae;
+  padding-top: 5px;
+}
+
+.article-actions {
+  border-top: 1px solid #aeaeae;
+  padding-top: 10px;
+}
+
+.description {
+  margin-top: 0px;
 }
 
 .footer {
@@ -82,22 +113,4 @@ $navbar-default-bg: #660033;
 .footer ul {
   float: right;
   list-style: none;
-}
-
-.separator {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  padding-bottom: 20px;
-}
-.separator::before, .separator::after {
-  content: '';
-  flex: 1;
-  border-bottom: 1px solid #aeaeae;
-}
-.separator::before {
-  margin-right: .25em;
-}
-.separator::after {
-  margin-left: .25em;
 }
