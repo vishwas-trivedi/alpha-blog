@@ -8,5 +8,14 @@
 </div>
 <h4 align="center"> <%= @user.username %>'s articles </h4>
 <hr/>
-<%= render 'articles/article', obj: @user.articles %>
+<% if @user_articles.count == 0 %>
+  <h4 align="center"><b>User is yet to create an article.</b></h4>
+<% end %>
+<div class="center">
+  <%= will_paginate @user_articles %>
+</div>
+<%= render 'articles/article', obj: @user_articles %>
+<div align="center">
+  <%= will_paginate @user_articles %>
+</div>
 
