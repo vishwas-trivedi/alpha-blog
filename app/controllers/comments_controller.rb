@@ -3,7 +3,12 @@ class CommentsController < ApplicationController
     @article = Article.find(params[:article_id])
     @comment = @article.comments.create(params_comment)
     @comment.user = current_user
-    @comment.save
+    if @comment.save
+      flash[:success] = "Comment successsfully added"
+    else
+      flash[:danger] = "Failed to add comment. It shoule be between 10-120 characters."
+    end
+
     redirect_to article_path(@article)
   end
 
