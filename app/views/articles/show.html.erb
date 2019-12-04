@@ -15,7 +15,7 @@
         </li>
       </div>
     </div>
-  </ul>  
+  </ul>
   <div class="acticle-desc">
     <p>
       <%= simple_format(@article.description)  %>
@@ -39,28 +39,32 @@
     <% end %>
     <%= link_to 'View all articels', articles_path, class:"btn btn-xs btn-success" %>
   </div>
-  
 </div>
-<% if logged_in? %>
-  <div class="row col-xs-8 col-xs-offset-2">
-    <h4 class="description">
-      <strong>
-        Comments :
-      </strong>
 
-    <!--
-      Render comment form
-     -->
-
-    </h4>
-  </div>  
-<% else %>
-  <div class= "well col-xs-8 col-xs-offset-2 comment-disabled">
-    <h4 class="center">
-      <strong>
-        You must log in to comment on this article.
-      </strong>
-    </h4>
-  </div>
-<% end %>
-
+<!-- Comment panel -->
+<div class="row bootstrap snippets">
+    <div class="col-xs-8 col-xs-offset-2">
+        <div class="comment-wrapper">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                  <%= pluralize(@article.comments.count, "Comment") %>
+                </div>
+                <div class="panel-body">
+                    <!-- Comment form -->
+                    <% if logged_in? %>
+                      <%= render 'comments/form' %>  
+                    <% else %>
+                      <div class = "guest">
+                       You need to login to comment on this article.
+                      </div>
+                    <% end %>
+                    
+                    <div class="clearfix"></div>
+                    <hr>
+                    <!-- Comment list -->
+                    <%= render 'comments/show', obj: @article %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

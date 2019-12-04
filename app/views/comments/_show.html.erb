@@ -1,0 +1,24 @@
+<ul class="media-list">
+  <% idx = 0; %>
+  <%= while idx < obj.comments.count do%>
+    <li class="media">
+      <a href="#" class="pull-left">
+        <%= gravatar_for(obj.comments[idx].user) %>
+      </a>
+      <div class="media-body">
+        <span class="text-muted pull-right">
+          <small class="text-muted">
+            <%= time_ago_in_words(obj.comments[idx].updated_at) %> ago
+          </small>
+        </span>
+        <strong class="text-success">
+          <%= obj.comments[idx].user.username %>
+        </strong>
+        <p>
+          <%= obj.comments[idx].body %>
+        </p>
+      </div>
+    </li>
+    <% idx+=1 %>
+  <% end %>
+</ul>

@@ -115,6 +115,30 @@ $navbar-default-bg: #660033;
   padding-left: 0;
 }
 
+.comment-wrapper .panel-body {
+  max-height:700px;
+  overflow:auto;
+}
+
+.comment-wrapper .panel-body .guest{
+  font-weight: bold;
+  background-color: beige;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.comment-wrapper .media-list .media img {
+  width:64px;
+  height:64px;
+  border:2px solid #e5e7e8;
+}
+
+.comment-wrapper .media-list .media {
+  border-bottom:1px dashed #efefef;
+  margin-bottom:25px;
+}
+
 .footer {
   margin-top: 45px;
   padding-top: 5px;

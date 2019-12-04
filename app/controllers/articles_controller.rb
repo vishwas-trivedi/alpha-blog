@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
   # New action
   def new
     @article = Article.new
+    @article.comment = Comment.new
   end
 
   # Create action
@@ -27,14 +28,13 @@ class ArticlesController < ApplicationController
   end
 
   # Show action
-  def show 
+  def show
   end
 
   def edit
   end
 
   def update
-    @article.user = User.first
     if @article.update(article_params)
       flash[:success] = "Article was usccessfully updated."
       redirect_to article_path(@article)

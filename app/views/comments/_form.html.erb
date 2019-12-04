@@ -1,0 +1,5 @@
+<%= form_with(model: [ @article, @article.comments.build ], local: true, :html =>{class: "form-horizontal", role: "form"}) do |form| %>
+    <%= form.text_area :body, rows:3, class:"form-control", placeholder:"Write a comment"  %>
+    <br>
+    <%= form.submit "Post", class: "btn btn-info pull-right" %>
+<% end %>

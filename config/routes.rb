@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
 
   # Creating all routes for articles
-  resources :articles
+  resources :articles do
+    resources :comments  #, except: [:edit, :update, :destroy]
+  end
 
   # Creating signup path
   get 'signup', to: 'users#new'
