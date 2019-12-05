@@ -11,7 +11,6 @@ class ArticlesController < ApplicationController
   # New action
   def new
     @article = Article.new
-    @article.comment = Comment.new
   end
 
   # Create action
